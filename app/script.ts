@@ -78,12 +78,12 @@
                 case 'en':
                     // Cambiamos el lenguage y volvemos a mostrar el menu
                     window.location.href = '../html/index.html';
-                    dropdown(true);
+                    /! dropdown(true); !/
                     break;
                 case 'cat':
                     // Cambiamos el lenguage y volvemos a mostrar el menu
                     window.location.href = '../html/index_cat.html';
-                    dropdown(true);
+                    /! dropdown(true); !/
                     break;
                 default:
                     // En caso de error lo mostramos por consola
