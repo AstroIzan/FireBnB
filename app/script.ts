@@ -67,27 +67,11 @@
          * ? No estoy seguro de que sea por la funcion del dropdown
          */
         
-        function change_lenguage( lenguage:string ) {
-            // En funcion del lenguage seleccionado, cambiamos la pagina
-            switch ( lenguage ) {
-                case 'es':
-                    // Cambiamos el lenguage y volvemos a mostrar el menu
-                    window.location.href = '../html/index_es.html';
-                    /! dropdown(true); !/
-                    break;
-                case 'en':
-                    // Cambiamos el lenguage y volvemos a mostrar el menu
-                    window.location.href = '../html/index.html';
-                    /! dropdown(true); !/
-                    break;
-                case 'cat':
-                    // Cambiamos el lenguage y volvemos a mostrar el menu
-                    window.location.href = '../html/index_cat.html';
-                    /! dropdown(true); !/
-                    break;
-                default:
-                    // En caso de error lo mostramos por consola
-                    console.log('|ERROR| -- Lenguage not found');
-                    break;
-            }
+        function change_lenguage( page:string ) {
+            window.location.href = page;
+        }
+
+
+        function hello() {
+            console.log('Hello');
         }

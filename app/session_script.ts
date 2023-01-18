@@ -1,5 +1,6 @@
 // VARIABLES
     // CONTROL DE ERRORES
+        let n_empty_login = 0;
         let n_empty_signup = 0;
         let passwords_match = true;
     // LOG-IN
@@ -133,36 +134,35 @@
 
         // Si no hay campos vacios y las contraseñas coinciden
             if ( n_empty_signup == 0 && passwords_match == true ) {
-                // Ocultamos los mensajes de error
-                    mUserSignupEmpty.style.display = 'none';
-                    mUserSignupEmpty.style.visibility = 'hidden';
-                    mPassSignupEmpty1.style.display = 'none';
-                    mPassSignupEmpty1.style.visibility = 'hidden';
-                    mPassSignupEmpty2.style.display = 'none';
-                    mPassSignupEmpty2.style.visibility = 'hidden';
-                    mPassSignup.style.display = 'none';
-                    mPassSignup.style.visibility = 'hidden';
-
                 // Comprobamos que el usuario no exista
-                    if ( localStorage.getItem( iUserSignup.value ) != null ) {
-                        mUserSignup.style.display = 'block';
-                        mUserSignup.style.visibility = 'visible';
-                    } else {
-                        mUserSignup.style.display = 'none';
-                        mUserSignup.style.visibility = 'hidden';
-                    }
+                if ( localStorage.getItem( iUserSignup.value ) != null ) {
+                    mUserSignup.style.display = 'block';
+                    mUserSignup.style.visibility = 'visible';
+                } else {
+                    mUserSignup.style.display = 'none';
+                    mUserSignup.style.visibility = 'hidden';
+                    // Ocultamos los mensajes de error
+                        mUserSignupEmpty.style.display = 'none';
+                        mUserSignupEmpty.style.visibility = 'hidden';
+                        mPassSignupEmpty1.style.display = 'none';
+                        mPassSignupEmpty1.style.visibility = 'hidden';
+                        mPassSignupEmpty2.style.display = 'none';
+                        mPassSignupEmpty2.style.visibility = 'hidden';
+                        mPassSignup.style.display = 'none';
+                        mPassSignup.style.visibility = 'hidden';
 
-                // Crea un array con el nombre de usuario y contraseña y lo guarda en el localStorage
-                    let user = [ iUserSignup.value, iPassSignup1.value ];
-                    localStorage.setItem( iUserSignup.value, JSON.stringify( user ) );
+                    // Crea un array con el nombre de usuario y contraseña y lo guarda en el localStorage
+                        let user = [ iUserSignup.value, iPassSignup1.value ];
+                        localStorage.setItem( iUserSignup.value, JSON.stringify( user ));
 
-                // Cambiamos el display a login
-                    change_sesion( false );
-                // Reiniciamos las variables
-                    n_empty_signup = 0;
-                    passwords_match = true; 
-                // Refrescamos la pagina
-                    location.reload();
+                    // Cambiamos el display a login
+                        change_sesion( false );
+                    // Reiniciamos las variables
+                        n_empty_signup = 0;
+                        passwords_match = true; 
+                    // Refrescamos la pagina
+                        location.reload();
+                } 
             } else {
                 // Reiniciamos las variables
                     n_empty_signup = 0;
@@ -171,5 +171,66 @@
                     mSignupError.style.display = 'block';
                     mSignupError.style.visibility = 'visible';
             }
+    }
 
+    
+    function login_user( lenguage:string) {
+        // En caso de que los campos esten vacios mostramos el mensaje de error correspondiente
+            if ( iUserLogin.value == '' ) {
+                n_empty_login++;
+                mUserLoginEmpty.style.display = 'block';
+                mUserLoginEmpty.style.visibility = 'visible';
+            } else {
+                mUserLoginEmpty.style.display = 'none';
+                mUserLoginEmpty.style.visibility = 'hidden'; }
+            
+            if ( iPassLogin.value == '' ) {
+                n_empty_login++;
+                mPassLoginEmpty.style.display = 'block';
+                mPassLoginEmpty.style.visibility = 'visible';
+            } else {  
+                mPassLoginEmpty.style.display = 'none';
+                mPassLoginEmpty.style.visibility = 'hidden'; }
+
+        // Comprobamos que el usuario exista
+            if ( localStorage.getItem( iUserLogin.value ) == null ) {
+                mUserLogin.style.display = 'block';
+                mUserLogin.style.visibility = 'visible';
+            } else {
+                mUserLogin.style.display = 'none';
+                mUserLogin.style.visibility = 'hidden';
+            }
+
+        // Comprobamos que la contraseña sea correcta1
+            if ( JSON.parse( localStorage.getItem( iUserLogin.value )!)[1] != iPassLogin.value ) {
+                mPassLogin.style.display = 'block';
+                mPassLogin.style.visibility = 'visible';
+            } else {
+                mPassLogin.style.display = 'none';
+                mPassLogin.style.visibility = 'hidden';
+            }
+
+        // Si el usuario existe y la contraseña es correcta
+            if ( localStorage.getItem( iUserLogin.value ) != null && JSON.parse( localStorage.getItem( iUserLogin.value )!)[1] == iPassLogin.value ) {
+                // Ocultamos los mensajes de error
+                    mUserLogin.style.display = 'none';
+                    mUserLogin.style.visibility = 'hidden';
+                    mPassLogin.style.display = 'none';
+                    mPassLogin.style.visibility = 'hidden';
+                // Entramos al sistema
+                switch (lenguage) {
+                    case 'en':
+                        window.location.href = '../app/a_index_en.html';
+                        break;
+                    case 'es':
+                        window.location.href = '../app/a_index_es.html';
+                        break;
+                    case 'cat':
+                        window.location.href = '../app/a_index_cat.html';
+                        break;
+                    default:
+                        console.log("Error al cargar la pagina");
+                        break;
+                }
+            }
     }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="../../images/logo.png">
+        <link rel="stylesheet" href="../../css/style.css">
+        <title> FireBnB </title>
+    </head>
+    <body>
+        <section id="header">
+            <div class="container">
+                <img src="../../images/logo.png" alt="">
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Reservas</a></li>
+                        <li><a href="#">Ocupacion</a></li>
+                    </ul>
+                </nav>
+                <div id="user_head">
+                    <i class='bx bxs-user-detail' id="icon_user" onclick="dropdown(true)"></i>
+                    <i class='bx bx-menu' id="icon_menu" onclick="dropdown(false)"></i>
+                    <div id="user_menu">
+                        <a href="../maintenance/e_maintenance_es.html"> Config. </a>
+                        <a href="../web/w_index_es.html"> Salir </a>
+                        <div class="line">
+                            <i class='bx bx-chevron-left' onclick="change_lenguage('../app/a_index_cat.html')"></i>
+                            <p>ES</p>
+                            <i class='bx bx-chevron-right' onclick="change_lenguage('../app/a_index_en.html')"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="app">
+            <div id="rooms">
+                <ul class="slider">
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                    <li onclick="hello();"> Habitacion 01 </li>
+                </ul>
+            </div>
+            <div id="rooms_info">
+                <div id="example_rooms">
+                    <div class="column">
+                        <button id="room"> Low Cost </button>
+                        <button id="room"> Vip </button>
+                    </div>
+                    <div class="column">
+                        <button id="room"> Normal </button>
+                        <button id="room"> Suite </button>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+        <section id="footer">
+            <p><span class="purple">FireBnB</span> | &copy; Izan Estirado </p>
+        </section>
+        <script src="../../js/script.js"></script>
+    </body>
+</html>

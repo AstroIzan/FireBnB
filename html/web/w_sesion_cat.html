@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="../../images/logo.png">
+        <link rel="stylesheet" href="../../css/style.css">
+        <title> FireBnB </title>
+    </head>
+    <body>
+        <section id="header">
+            <div class="container">
+                <img src="../../images/logo.png" alt="">
+                <nav>
+                    <ul>
+                        <div class="line">
+                            <i class='bx bx-chevron-left button_lenguage_left' onclick="change_lenguage('../web/w_sesion_en.html')"></i>
+                            <p class="text_leanguage">Cat</p>
+                            <i class='bx bx-chevron-right button_lenguage_right' onclick="change_lenguage('../web/w_sesion_es.html')"></i>
+                        </div>
+                        <li><a href="index.html">Inici</a></li>    
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section id="sesion">
+            <form action="" id="login">
+                <h1>Iniciar Sesió</h1>
+                <div class="line">
+                    <i class='bx bx-user'></i>
+                    <input type="text" name="" placeholder="Username" id="iUserLogin">
+                </div>
+                <span class="error" id="mUserLogin">* L'usuari es incorrecte</span>
+                <span class="error" id="mUserLoginEmpty">* L'usuari es obligatori</span>
+                <div class="line">
+                    <i class='bx bx-lock'></i>
+                    <input type="password" name="" placeholder="Password" id="iPassLogin">
+                </div>
+                <span class="error" id="mPassLogin">* La contrasenya es incorrecte</span>
+                <span class="error" id="mPassLoginEmpty">* La contrasenya es obligatoria</span>
+                <button type="button" onclick="login_user('cat')">Iniciar Sesió</button>
+                <p>Encara no tens compte? <a onclick="change_sesion(true)">Registrar-se</a></p>
+            </form>
+            <form action="" id="signup">
+                <h1>Registrar-se</h1>
+                <div class="line">
+                    <i class='bx bx-user'></i>
+                    <input type="text" name="" placeholder="Username" id="iUserSignup">
+                </div>
+                <span class="error" id="mUserSignup">* L'usuari ja existeix</span>
+                <span class="error" id="mUserSignupEmpty">* L'usuari es obligatori</span>
+                <div class="line">
+                    <i class='bx bx-lock'></i>
+                    <input type="password" name="" placeholder="Password" id="iPassSignup1">
+                </div>
+                <span class="error" id="mPassSignupEmpty1">* La contrasenya es obligatoria </span>
+                <div class="line">
+                    <i class='bx bx-lock'></i>
+                    <input type="password" name="" placeholder="Confirm Password" id="iPassSignup2">
+                </div>
+                <span class="error" id="mPassSignup">* Les contrasenyes no coincideixen</span>
+                <span class="error" id="mPassSignupEmpty2">* La contrasenya es obligatoria</span>
+                <button type="button" onclick="register_user()">Registrar-se</button>
+                <span class="error" id="mSignupError">* Un error inesperat ha ocurregut. Intenta-ho de nou mes tard!</span>
+                <p>Ya tens compte? <a onclick="change_sesion(false)"> Inicia Sesió</a></p>
+            </form>
+        </section>
+        <section id="footer">
+            <p><span class="purple">FireBnB</span> | &copy; Izan Estirado </p>
+        </section>
+        <script src="../../js/session_script.js"></script>
+        <script src="../../js/script.js"></script>
+    </body>
+</html>

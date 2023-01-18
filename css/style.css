@@ -40,6 +40,12 @@
         background-color: var(--white);
         margin: 0px;
         padding: 0px; }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
         
     .container {
         width: 80%;
@@ -81,10 +87,24 @@
         font-size: 0.8em;
         color: var(--red); }
 
+    select {
+        border: none;
+        font-size: 1.2em;
+        color: var(--white);
+        background: var(--dark-gray); }
+
+    option {
+        font-style: 'Poppins', sans-serif !important;
+        font-size: 1.2em;
+        color: var(--white);
+        background: var(--dark-gray); }
+
 /* HEADER */
     #header {
+        box-sizing: border-box;
         width: 100%;
         height: 10vh;
+        border-bottom: 2px solid var(--purple);
         background-color: var(--dark-gray); }
 
     #header .container {
@@ -145,6 +165,8 @@
         #user_head i:active { color: var(--light-purple); }
 
         #user_menu {
+            border: 2px solid var(--purple);
+            border-top: none;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
             display: flex;
@@ -155,7 +177,7 @@
             height: 150px;
             background-color: var(--dark-gray);
             position: absolute;
-            top: 7vh;
+            top: 7.5vh;
             z-index: 1;
             transition: all 1s; }
 
@@ -198,11 +220,7 @@
     #footer {
         width: 100%;
         height: 10vh;
-        background-color: var(--dark-gray);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; }
+        background-color: var(--dark-gray); }
 
     #footer p {
         color: var(--white);
@@ -265,6 +283,7 @@
             #sesion button { margin-top: 20px; }
             
             #sesion a {
+                cursor: pointer;
                 text-decoration: none;
                 color: var(--purple); }
             
@@ -274,7 +293,274 @@
 
             #sesion p { color: var(--white); }
 
-
+    /* INFO */
+        #info {
+            transition: all 1s;
+            width: 100%;
+            height: 60vh;
+            background-color: var(--dark-gray); }
         
+        #info h1 {
+            text-align: center;
+            color: var(--purple);
+            font-size: 2.5em; }
 
+        #info p {
+            text-align: center;
+            color: var(--white);
+            font-size: 1.3em; }
+
+        .button_lenguage_left, .button_lenguage_right {
+            transition: all 0.2s;
+            font-size: 2.5em;
+            color: var(--white); }
+
+        .button_lenguage_left:hover, .button_lenguage_right:hover {
+            color: var(--purple); }
+
+        .text_leanguage {
+            color: var(--white);
+            font-size: 1.3em; }
+
+    /* INFO IMAGES */
+        #info_images{
+            transition: all 1s;
+            width: 100%;
+            background-color: var(--dark-gray); }
+
+        .galery { 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #info_images img {
+            object-fit: cover; }
         
+        #galery1, #galery2, #galery4, #galery5 {
+            box-shadow: var(--black) 0px 0px 10px 0px; 
+            margin: 1vh;
+            width: 40vh;
+            height: 40vh; }
+
+        #galery3 {
+            box-shadow: var(--black) 0px 0px 10px 0px; 
+            margin: 1vh;
+            width: 42vh;
+            height: 82vh; }
+
+        #galery6 {
+            box-shadow: var(--black) 0px 0px 10px 0px; 
+            margin: 1vh;
+            width: 82vh;
+            height: 40vh; }
+
+        .image_galery_hover { transition: all 0.5s;
+            filter: grayscale(100%); }
+
+        .image_galery_hover:hover { 
+            z-index: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1); }
+
+    /* CONTACT */
+        #contact {
+            transition: all 1s;
+            padding-top: 60px;
+            width: 100%;
+            height: 80vh;
+            background-color: var(--dark-gray); }
+
+        #contact .container { 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; }
+
+        #contact .column { 
+            height: 100%;
+            width: 50%; }
+
+        #contact .column h1 {
+            margin: 0px;
+            text-align: center;
+            color: var(--purple);
+            font-size: 2.5em; }
+
+        #contact .column p {
+            text-align: center;
+            color: var(--white);
+            font-size: 1.3em; }
+
+        #contact .column form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;}
+
+        #contact .column form input {
+            font-family: 'Poppins', sans-serif !important;
+            width: 100%;
+            height: 10%;
+            margin: 5px;
+            border: 2px solid var(--dark-gray);
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: var(--black);
+            transition: all 0.2s; }
+        
+        #contact .column form textarea {
+            font-family: 'Poppins', sans-serif !important;
+            width: 100%;
+            height: 30%;
+            margin: 5px;
+            border: 2px solid var(--dark-gray);
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: var(--black);
+            transition: all 0.2s; }
+
+        #contact .column form input:focus, textarea:focus {
+            font-family: 'Poppins', sans-serif !important;
+            outline: none !important;
+            border: 2px solid var(--purple) !important;
+            color: var(--purple) !important; }
+
+        #contact .column form textarea::placeholder, input::placeholder { font-family: 'Poppins', sans-serif !important; }
+
+        #contact iframe {
+            width: 100%;
+            height: 100%;
+            border: none; }
+
+        #contact button { margin-top: 30px;}
+
+/* MAINTENANCE */
+    #maintenance {
+        height: 80vh;
+        width: 100%;
+        background-color: var(--dark-gray); }
+
+    #maintenance .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+    
+    #maintenance img {
+        margin-top: 20px;
+        width: 30vh; }
+
+    #maintenance h1 {
+        color: var(--purple);
+        font-size: 2.5em; }
+
+    #maintenance p {
+        margin: 5px;
+        color: var(--white);
+        font-size: 1.3em; }
+
+/* APP */
+    #app {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        width: 100%;
+        background-color: var(--dark-gray); }
+
+    #app #rooms {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20vw;
+        margin-left: 5vw;
+        height: 100%;}
+
+    .slider {
+        width: 20vw;
+        height: 60vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: right; }
+    
+    #app ul {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        padding: 100 !important; }
+
+    #app ul li {
+        border-radius: 20px;
+        padding: 15px;
+        margin: 5px;
+        border: 2px solid var(--dark-gray);
+        background: var(--gradient-0);
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.3em;
+        color: var(--white);
+        width: 80%;
+        cursor: pointer; }
+
+    #app ul li:hover {
+        color: var(--purple);
+        border: 2px solid   var(--purple);
+        background: var(--dark-gray); }
+
+
+    /* modify the scrollbar */
+    #app ul::-webkit-scrollbar {
+        width: 7px; }
+
+    #app ul::-webkit-scrollbar-track {
+        border-radius: 30px;
+        background: var(--gray); }
+      
+    #app ul::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background: var(--purple); }
+
+    /* ROOMS INFO */
+        #app #rooms_info {
+            margin-right: 5vw;
+            width: 70vw;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; }
+
+        #example_rooms {
+            width: 40vw;
+            height: 45vh;
+            border-radius: 30px;
+            box-shadow: var(--ultra-hard-gray) 0px 0px 30px 0px; 
+            background-color: var(--ultra-hard-gray);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; }
+
+        #example_rooms .column {
+            margin: 20px;
+            width: 32%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }
+
+        #example_rooms button {
+            height: 120px;
+            width: 240px;
+            margin: 20px; }
