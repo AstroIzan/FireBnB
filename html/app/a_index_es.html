@@ -38,40 +38,93 @@
         <section id="app">
             <div id="rooms">
                 <ul class="slider">
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
-                    <li onclick="hello();"> Habitacion 01 </li>
+                    <!-- Piso 1 -->
+                    <li onclick="hello();" name="LowCost"> Habitacion 101 </li>
+                    <li onclick="hello();" name="LowCost"> Habitacion 102 </li>
+                    <li onclick="hello();" name="LowCost"> Habitacion 103 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 104 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 105 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 106 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 107 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 108 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 109 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 110 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 111 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 112 </li>
+                    <!-- Piso 2 -->
+                    <li onclick="hello();" name="LowCost"> Habitacion 201 </li>
+                    <li onclick="hello();" name="LowCost"> Habitacion 202 </li>
+                    <li onclick="hello();" name="LowCost"> Habitacion 203 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 204 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 205 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 206 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 207 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 208 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 209 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 210 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 211 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 212 </li>
+                    <!-- Piso 3 -->
+                    <li onclick="hello();" name="LowCost"> Habitacion 301 </li>
+                    <li onclick="hello();" name="LowCost"> Habitacion 302 </li>
+                    <li onclick="hello();" name="LowCost"> Habitacion 303 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 304 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 305 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 306 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 307 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 308 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 309 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 310 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 311 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 312 </li>
+                    <!-- Piso 4 -->
+                    <li onclick="hello();" name="LowCost"> Habitacion 401 </li>
+                    <li onclick="hello();" name="LowCost"> Habitacion 402 </li>
+                    <li onclick="hello();" name="LowCost"> Habitacion 403 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 404 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 405 </li>
+                    <li onclick="hello();" name="Normal"> Habitacion 406 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 407 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 408 </li>
+                    <li onclick="hello();" name="Vip"> Habitacion 409 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 410 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 411 </li>
+                    <li onclick="hello();" name=Suite> Habitacion 412 </li>
                 </ul>
             </div>
             <div id="rooms_info">
                 <div id="example_rooms">
                     <div class="column">
-                        <button id="room"> Low Cost </button>
-                        <button id="room"> Vip </button>
+                        <div id="room">
+                            <h1>Low Cost</h1>
+                            <p>Habitacion de bajo coste. Para gente sencilla, pero con ideas claras.</p>
+                            <div class="line">
+                                <button onclick="show_list('LowCost')" >Mostar Low Cost</button>
+                            </div>
+                        </div>
+                        <div id="room">
+                            <h1>Vip</h1>
+                            <p>Habitacion de alto coste. Para gente que se puede permitir lujos, pero no muchos...</p>
+                            <div class="line">
+                                <button onclick="show_list('Vip')" >Mostar Vip</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="column">
-                        <button id="room"> Normal </button>
-                        <button id="room"> Suite </button>
+                        <div id="room">
+                            <h1>Normal</h1>
+                            <p>Habitacion de coste medio. Para gente sin preocupaciones, que quiera pasar una buena noche...</p>
+                            <div class="line">
+                                <button onclick="show_list('Normal')" >Mostar Normal</button>
+                            </div>
+                        </div>
+                        <div id="room">
+                            <h1>Suite</h1>
+                            <p>Habitacion de muy alto coste. Para los atrevidos, que ademas de atrevidos se apellidan 'Borbon'.</p>
+                            <div class="line">
+                                <button onclick="show_list('Suite')" >Mostar Suite</button>
+                            </div>
+                        </div>   
                     </div>
                 </div>
 

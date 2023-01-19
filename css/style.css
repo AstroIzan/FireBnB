@@ -483,8 +483,9 @@
         height: 100%;}
 
     .slider {
+        margin-top: 5vh;
         width: 20vw;
-        height: 60vh;
+        height: 75vh;
         overflow-x: hidden;
         overflow-y: auto;
         text-align: right; }
@@ -493,7 +494,7 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         list-style: none;
         padding: 0;
@@ -541,26 +542,52 @@
             align-items: center; }
 
         #example_rooms {
-            width: 40vw;
-            height: 45vh;
-            border-radius: 30px;
-            box-shadow: var(--ultra-hard-gray) 0px 0px 30px 0px; 
-            background-color: var(--ultra-hard-gray);
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center; }
 
-        #example_rooms .column {
+        #room {
             margin: 20px;
-            width: 32%;
-            height: 100%;
+            padding: 20px;
+            width: 22vw;
+            height: 12vw;
+            background: var(--ultra-hard-gray);
+            opacity: 70%;
+            box-shadow: var(--ultra-hard-gray) 0px 0px 10px;
+            border: 1px solid var(--purple);
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center; }
 
-        #example_rooms button {
-            height: 120px;
-            width: 240px;
-            margin: 20px; }
+        #room h1 { 
+            margin: 0px;
+            color: var(--purple);
+            font-size: 2.5em; }
+        
+        #room p {
+            margin: 0px;
+            text-align: center;
+            color: var(--white);
+            font-size: 1.3em; }
+
+        #room button { 
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 20px !important;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--white);
+            background: var(--gradient-0);
+            transition: all 0.2s; }
+    
+        #room button:hover { background: var(--gradient-reverse); }
+
+        #room button:active { background: var(--gradient-100); }
+
+
+        
