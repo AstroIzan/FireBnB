@@ -15,22 +15,152 @@
                 <img src="../../images/logo.png" alt="">
                 <nav>
                     <ul>
-                        <li><a href="#">Inici</a></li>
-                        <li><a href="#">Reserves</a></li>
-                        <li><a href="#">Ocupació</a></li>
+                        <li onclick="change_plane(1)">Inicio</li>
+                        <li><a href="../maintenance/e_maintenance_es.html">Reservas</a></li>
+                        <li><a href="../maintenance/e_maintenance_es.html">Ocupacion</a></li>
                     </ul>
                 </nav>
                 <div id="user_head">
                     <i class='bx bxs-user-detail' id="icon_user" onclick="dropdown(true)"></i>
                     <i class='bx bx-menu' id="icon_menu" onclick="dropdown(false)"></i>
                     <div id="user_menu">
-                        <a href="../maintenance/e_maintenance_cat.html"> Config. </a>
-                        <a href="../web/w_index_cat.html"> Sortir </a>
+                        <a href="../maintenance/e_maintenance_es.html"> Config. </a>
+                        <a href="../web/w_index_es.html" onclick="skip()"> Salir </a>
                         <div class="line">
-                            <i class='bx bx-chevron-left' onclick="change_lenguage('../app/a_index_en.html')"></i>
-                            <p>CAT</p>
-                            <i class='bx bx-chevron-right' onclick="change_lenguage('../app/a_index_es.html')"></i>
+                            <i class='bx bx-chevron-left' onclick="change_lenguage('../app/a_index_cat.html')"></i>
+                            <p>ES</p>
+                            <i class='bx bx-chevron-right' onclick="change_lenguage('../app/a_index_en.html')"></i>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="app">
+            <div id="rooms">
+                <ul class="slider">
+                    <!-- Piso 1 -->
+                    <li class="free" onclick="reserve(0, 1);" name="LowCost"> Habitacion 101 - Low Cost </li>
+                    <li class="free" onclick="reserve(1, 1);" name="LowCost"> Habitacion 102 - Low Cost </li>
+                    <li class="free" onclick="reserve(2, 1);" name="LowCost"> Habitacion 103 - Low Cost </li>
+                    <li class="free" onclick="reserve(0, 2);" name="Normal"> Habitacion 104 - Normal </li>
+                    <li class="free" onclick="reserve(1, 2);" name="Normal"> Habitacion 105 - Normal </li>
+                    <li class="free" onclick="reserve(2, 2);" name="Normal"> Habitacion 106 - Normal </li>
+                    <li class="free" onclick="reserve(0, 3);" name="Vip"> Habitacion 107 - Vip </li>
+                    <li class="free" onclick="reserve(1, 3);" name="Vip"> Habitacion 108 - Vip </li>
+                    <li class="free" onclick="reserve(2, 3);" name="Vip"> Habitacion 109 - Vip </li>
+                    <li class="free" onclick="reserve(0, 4);" name=Suite> Habitacion 110 - Suite </li>
+                    <li class="free" onclick="reserve(1, 4);" name=Suite> Habitacion 111 - Suite </li>
+                    <li class="free" onclick="reserve(2, 4);" name=Suite> Habitacion 112 - Suite </li>
+                    <!-- Piso 2 -->
+                    <li class="free" onclick="reserve(3, 1);" name="LowCost"> Habitacion 201 - Low Cost </li>
+                    <li class="free" onclick="reserve(4, 1);" name="LowCost"> Habitacion 202 - Low Cost </li>
+                    <li class="free" onclick="reserve(5, 1);" name="LowCost"> Habitacion 203 - Low Cost </li>
+                    <li class="free" onclick="reserve(3, 2);" name="Normal"> Habitacion 204 - Normal </li>
+                    <li class="free" onclick="reserve(4, 2);" name="Normal"> Habitacion 205 - Normal </li>
+                    <li class="free" onclick="reserve(5, 2);" name="Normal"> Habitacion 206 - Normal </li>
+                    <li class="free" onclick="reserve(3, 3);" name="Vip"> Habitacion 207 - Vip </li>
+                    <li class="free" onclick="reserve(4, 3);" name="Vip"> Habitacion 208 - Vip </li>
+                    <li class="free" onclick="reserve(5, 3);" name="Vip"> Habitacion 209 - Vip </li>
+                    <li class="free" onclick="reserve(3, 4);" name=Suite> Habitacion 210 - Suite </li>
+                    <li class="free" onclick="reserve(4, 4);" name=Suite> Habitacion 211 - Suite </li>
+                    <li class="free" onclick="reserve(5, 4);" name=Suite> Habitacion 212 - Suite </li>
+                    <!-- Piso 3 -->
+                    <li class="free" onclick="reserve(6, 1);" name="LowCost"> Habitacion 301 - Low Cost </li>
+                    <li class="free" onclick="reserve(7, 1);" name="LowCost"> Habitacion 302 - Low Cost </li>
+                    <li class="free" onclick="reserve(8, 1);" name="LowCost"> Habitacion 303 - Low Cost </li>
+                    <li class="free" onclick="reserve(6, 2);" name="Normal"> Habitacion 304 - Normal </li>
+                    <li class="free" onclick="reserve(7, 2);" name="Normal"> Habitacion 305 - Normal </li>
+                    <li class="free" onclick="reserve(8, 2);" name="Normal"> Habitacion 306 - Normal </li>
+                    <li class="free" onclick="reserve(6, 3);" name="Vip"> Habitacion 307 - Vip </li>
+                    <li class="free" onclick="reserve(7, 3);" name="Vip"> Habitacion 308 - Vip </li>
+                    <li class="free" onclick="reserve(8, 3);" name="Vip"> Habitacion 309 - Vip </li>
+                    <li class="free" onclick="reserve(6, 4);" name=Suite> Habitacion 310 - Suite </li>
+                    <li class="free" onclick="reserve(7, 4);" name=Suite> Habitacion 311 - Suite </li>
+                    <li class="free" onclick="reserve(8, 4);" name=Suite> Habitacion 312 - Suite </li>
+                    <!-- Piso 4 -->
+                    <li class="free" onclick="reserve(9, 1);" name="LowCost"> Habitacion 401 - Low Cost </li>
+                    <li class="free" onclick="reserve(10, 1);" name="LowCost"> Habitacion 402 - Low Cost </li>
+                    <li class="free" onclick="reserve(11, 1);" name="LowCost"> Habitacion 403 - Low Cost </li>
+                    <li class="free" onclick="reserve(9, 2);" name="Normal"> Habitacion 404 - Normal </li>
+                    <li class="free" onclick="reserve(10, 2);" name="Normal"> Habitacion 405 - Normal </li>
+                    <li class="free" onclick="reserve(11, 2);" name="Normal"> Habitacion 406 - Normal </li>
+                    <li class="free" onclick="reserve(9, 3);" name="Vip"> Habitacion 407 - Vip </li>
+                    <li class="free" onclick="reserve(10, 3);" name="Vip"> Habitacion 408 - Vip </li>
+                    <li class="free" onclick="reserve(11, 3);" name="Vip"> Habitacion 409 - Vip </li>
+                    <li class="free" onclick="reserve(9, 4);" name=Suite> Habitacion 410 - Suite </li>
+                    <li class="free" onclick="reserve(10, 4);" name=Suite> Habitacion 411 - Suite </li>
+                    <li class="free" onclick="reserve(11, 4);" name=Suite> Habitacion 412 - Suite </li>
+                </ul>
+            </div>
+            <div id="rooms_info">
+                <div id="example_rooms">
+                    <div class="column">
+                        <div id="room">
+                            <h1>Low Cost</h1>
+                            <p>Habitacion de bajo coste. Para gente sencilla, pero con ideas claras.</p>
+                            <button onclick="show_list('LowCost')" >Mostar Low Cost</button>
+                        </div>
+                        <div id="room">
+                            <h1>Vip</h1>
+                            <p>Habitacion de alto coste. Para gente que se puede permitir lujos, pero no muchos...</p>
+                            <button onclick="show_list('Vip')" >Mostar Vip</button>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div id="room">
+                            <h1>Normal</h1>
+                            <p>Habitacion de coste medio. Para gente sin preocupaciones, que quiera pasar una buena noche...</p>
+                            <button onclick="show_list('Normal')" >Mostar Normal</button>
+                        </div>
+                        <div id="room">
+                            <h1>Suite</h1>
+                            <p>Habitacion de muy alto coste. Para los atrevidos, que ademas de atrevidos se apellidan 'Borbon'.</p>
+                            <button onclick="show_list('Suite')" >Mostar Suite</button>
+                        </div> 
+                    </div>
+                </div>
+                <div id="room_purchase">
+                    <h1 id="roomName"> Habitacion 101 </h1>
+                    <form action="">
+                        <div class="column">
+                            <label for="cFechaEntrada"> Fecha de entrada </label>
+                            <input type="date" id="cFechaEntrada" name="cFechaEntrada" onselect="alert()" required>
+                            <label for="cFechaSalida"> Fecha de salida </label>
+                            <input type="date" id="cFechaSalida" name="cFechaSalida" required>
+                            <label for="cOcupacion"> Tipo de habitacion </label>
+                            <div class="line" id="setbuttons_ocupancy">
+                                <div id="one" class="press_occupancy" onclick="setOcupation(1)"><i class='bx bx-male'></i></div>
+                                <div id="two" class="no_press_occupancy" onclick="setOcupation(2)"><i class='bx bx-male-female'></i></div>
+                                <div id="three" class="no_press_occupancy" onclick="setOcupation(3)"><i class='bx bx-accessibility'></i></div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label for=""> Nombre de usuario</label>
+                            <div class="line options">
+                                <span id="add_username"></span>
+                                <i class='bx bx-male'></i>
+                            </div>
+                            <label for=""> Dias reservados </label>
+                            <div class="line options">
+                                <span id="add_days"></span>
+                                <i class='bx bx-calendar'></i>
+                            </div>
+                            <label for=""> Precio </label>
+                            <div class="line options">
+                                <span id="add_price"></span>
+                                <i class='bx bx-euro'></i>
+                            </div>
+                        </div>
+                        <div class="column_cross">
+                            <i class='bx bx-x' onclick="change_plane(1)"></i>
+                        </div>
+                    </form>
+                    <div class="line"><span class="error" id="error_reserva"></span></div>
+                    <div class="line bottom">
+                        <div id="reservebutton" class="line">
+
+                        </div>
+                        <button type="submit" id="btnCancel" onclick="change_plane(1)">Cancelar</button>
                     </div>
                 </div>
             </div>

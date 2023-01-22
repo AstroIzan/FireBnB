@@ -134,16 +134,15 @@
             padding: 7px 15px;
             border-radius: 20px;
             margin: 0px 10px;
+            color: var(--white);
+            font-size: 1.2em; 
             transition: all 1s !important; }
 
         nav ul li:hover { background: var(--gradient-0); }
 
         nav ul li:active { background: var(--gradient-100); }
 
-        nav ul li a {
-            text-decoration: none;
-            color: var(--white);
-            font-size: 1.2em; }
+        nav ul li a { font-size: 1em !important; }
 
     /* User Menu */
         #user_head {
@@ -211,7 +210,7 @@
 
         #login_a:active { background: var(--gradient-100); }
     
-        #login_a a { 
+        a { 
             color: var(--white);
             text-decoration: none;
             font-size: 1.2em; }
@@ -459,9 +458,23 @@
         font-size: 2.5em; }
 
     #maintenance p {
+        text-align: center;
         margin: 5px;
         color: var(--white);
         font-size: 1.3em; }
+
+    #maintenance a {
+        background: var(--gradient-0);
+        color: var(--white);
+        padding: 15px;
+        transition: all 0.3s;
+        border-radius: 30px;
+        border: var(--dark-gray) 2px solid; }
+
+    #maintenance a:hover {
+        background: var(--ultra-hard-gray);
+        border: var(--white) 2px solid;
+    }
 
 /* APP */
     #app {
@@ -537,11 +550,13 @@
             width: 70vw;
             height: 100%;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center; }
 
         #example_rooms {
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -589,5 +604,156 @@
 
         #room button:active { background: var(--gradient-100); }
 
+    /* ROOMS PURCHASE */
+        #app #room_purchase {
+            border: 1px solid var(--purple);
+            background-color: var(--ultra-hard-gray);
+            opacity: 70%;
+            width: 80%;
+            height: 80%;
+            display: none;
+            visibility: hidden;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }      
+            
+        .press {
+            pointer-events: none;
+            opacity: 100% !important;
+            background: var(--ultra-hard-gray) !important;
+            border: 2px solid var(--purple) !important;
+            color: var(--purple) !important; }
 
+        .ocuped {
+            pointer-events: none;
+            opacity: 70% !important;
+            background: var(--dark-gray) !important;
+            border: 2px solid var(--purple) !important;
+            color: var(--purple) !important; }
+
+        #room_purchase form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; }
+
+        #room_purchase .column { width: 42%; }
+
+        .column_cross {
+            width: 10%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start; }
+
+        .column_cross i {
+            position: absolute;
+            top: 187px;
+            right: 250px;
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 0px;
+            font-size: 4em;
+            color: var(--purple);
+            transition: all 0.2s;
+            cursor: pointer; }
+
+        .column_cross i:hover {
+            color: var(--white);
+            background-color: var(--purple); }
+
+        .column_cross i:active { color: var(--ultra-hard-gray) }
         
+        #room_purchase h1 {
+            margin-top: 10px;
+            color: var(--purple);
+            font-size: 2.5em; }
+
+        #room_purchase label {
+            margin-top: 10px;
+            color: var(--white);
+            font-size: 1.8em; }
+
+        #room_purchase input {
+            border: none;
+            border-radius: 10px;
+            height: 50px;
+            padding: 0px 15px;
+            font-size: 1.2em;
+            color: var(--white);
+            background: var(--gradient-0);
+            transition: all 0.2s; }
+
+        #room_purchase div#one, div#two, div#three {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; 
+            width: 70px;
+            height: 50px;
+            background-color: var(--white); }
+
+        #room_purchase div#one {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px; }
+
+        #room_purchase div#three {
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px; }
+
+        .no_press_occupancy:hover { background-color: var(--dark-gray) !important; }
+        .no_press_occupancy:hover i { color: var(--white) !important; }
+
+
+        #room_purchase div#one, div#two, div#three i {
+            color: var(--dark-gray);
+            font-size: 2em; }
+
+        .press_occupancy { background: var(--gradient-0) !important; }
+        .press_occupancy i { color: var(--white) !important; }
+
+        .no_press_occupancy { background: var(--white) !important; }
+        .no_press_occupancy i { color: var(--dark-gray) !important; }
+
+        #room_purchase .column #suplemento_precio {
+            color: var(--white);
+            font-size: 1.2em; }
+
+        #room_purchase .column .options span {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; 
+            width: 140px;
+            height: 50px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background-color: var(--white);
+            color: var(--purple) !important;
+            font-weight: bold; }
+
+        #room_purchase .column .options i {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background: var(--gradient-0);
+            color: var(--white);
+            font-size: 1.5em;
+            text-align: center;
+            line-height: 40px; }
+
+        #room_purchase .bottom { margin-bottom: 10px; }
+
+        #room_purchase .bottom button { margin: 10px; }
+
+        #nombre_de_usuario {
+            display: none;
+            visibility: hidden; }

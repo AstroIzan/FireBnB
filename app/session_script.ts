@@ -26,6 +26,8 @@
         let login:any = document.getElementById("login");
         let signup:any = document.getElementById("signup");
 
+    // NOMBRE DE USUARIO
+        let nombre_de_usuario:any = document.getElementById("nombre_de_usuario");
 // SETTINGS
     // DISPLAYS
         login.style.display = 'flex';
@@ -217,6 +219,8 @@
                     mUserLogin.style.visibility = 'hidden';
                     mPassLogin.style.display = 'none';
                     mPassLogin.style.visibility = 'hidden';
+                // Userloged en localsotrage
+                    localStorage.setItem( 'userloged', iUserLogin.value );
                 // Entramos al sistema
                 switch (lenguage) {
                     case 'en':
@@ -229,7 +233,7 @@
                         window.location.href = '../app/a_index_cat.html';
                         break;
                     default:
-                        console.log("Error al cargar la pagina");
+                        console.log("!ERROR! Lenguage not found");
                         break;
                 }
             }
