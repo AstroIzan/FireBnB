@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="../../images/logo.png">
+        <link rel="stylesheet" href="../../css/style.css">
+        <title> FireBnB </title>
+    </head>
+    <body>
+        <section id="header">
+            <div class="container">
+                <img src="../../images/logo.png" alt="">
+                <nav>
+                    <ul>
+                        <li><a href="#info">Home</a></li>
+                        <li><a href="#info_images">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="line">
+                    <div class="line">
+                        <i class='bx bx-chevron-left button_lenguage_left' onclick="change_lenguage('../web/w_index_es.html')"></i>
+                        <p class="text_leanguage">En</p>
+                        <i class='bx bx-chevron-right button_lenguage_right' onclick="change_lenguage('../web/w_index_cat.html')"></i>
+                    </div>
+                    <li id="login_a"><a href="w_sesion_en.html">Log In</a></li>
+                </div>
+            </div>
+        </section>
+        <section id="info">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>FireBnB is a website that allows you to rent a hotel or motel room for a few days, weeks or months. It is an excellent option, since it 
+                    includes all the advantages of the competition, but also gives one of the most important, discretion, for all those users who want to play god!</p>
+            </div>
+        </section>
+        <section id="info_images">
+            <div class="galery">
+                <div class="column">
+                    <img src="../../images/room01.png" alt="" id="galery1" class="image_galery_hover">
+                    <img src="../../images/room03.png" alt="" id="galery2" class="image_galery_hover">
+                </div>
+                <img src="../../images/room02.png" alt="" id="galery3" class="image_galery_hover">
+                <div class="column">
+                    <div class="line">
+                        <img src="../../images/room04.png" alt="" id="galery5" class="image_galery_hover">
+                        <img src="../../images/room05.png" alt="" id="galery4" class="image_galery_hover">
+                    </div>
+                    <img src="../../images/room06.png" alt="" id="galery6" class="image_galery_hover">
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <div class="column">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.7800000000007!2d-99.1679996857753!3d19.4329999869082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff2f8b8f5f0d%3A0x8b2b2b2b2b2b2b2b2!2sUniversidad%20Nacional%20Aut%C3%B3noma%20de%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1634041000000!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="column">
+                    <h1>Contact Us</h1>
+                    <p>For any questions or suggestions, you <br>can contact us through the following form:</p>
+                    <form action="">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <textarea name="" id="message_contact" cols="30" rows="10" placeholder="Message"></textarea>
+                        <button type="submit"> Send </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <p><span class="purple">FireBnB</span> | &copy; Izan Estirado </p>
+        </section>
+        <script src="../../js/script.js"></script>
+    </body>
+</html>
