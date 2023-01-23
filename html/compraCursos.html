@@ -1,100 +1,106 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Comprar Cursos</title>
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="icon" href="../img/logo_white.png">
-    </head>
-    <body>
-        <nav id="navbarr" class="navbar navbar-expand-lg bg-light" style="color: white;">
-            <div class="container-fluid m-0" id="menu">
-                <a class="navbar-brand m-0" href="#" style="color: white;"><img class="logo"
-                        src="../img/logo_white.png"></i>Tot
-                    s'aprèn</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse m-0" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto mx-5">
-                        <a class="nav-link active text-white" aria-current="page" href="cursosStudent.html">Cursos</a>
-                        <i class='bx bx-bell'></i>
-                        <div class="row">
-                            <i class='bx bx-user-circle'></i>
-                        </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Cursos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../img/logo_white.png">
+</head>
+
+<body>
+    <nav id="navbarr" class="navbar navbar-expand-lg bg-light" style="color: white;">
+        <div class="container-fluid m-0" id="menu">
+            <a class="navbar-brand m-0" href="#" style="color: white;"><img class="logo"
+                    src="../img/logo_white.png"></i>Tot
+                s'aprèn</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse m-0" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto mx-5">
+                    <a class="nav-link active text-white" aria-current="page" href="cursosStudent.html">Cursos</a>
+                    <i class='bx bx-bell'></i>
+                    <div class="row">
+                        <i class='bx bx-user-circle'></i>
                     </div>
                 </div>
-        </nav>
-        <h2 class="title-3">Comprar Cursos</h2>
-        <div class="line2 mt-5">
-            <!-- Desplegable con las secciones de cada curso -->
-            <select name="tema" id="seccion">
-                <option value="0">Selecciona una secció</option>
-                <option value="1">Informàtica</option>
-                <option value="2">Mecànica</option>
-                <option value="3">Cuina</option>
-            </select>
-            <a id="search" onclick="showCont();" href="#">Buscar</a>
-        </div>
-        <div class="container bg-light mt-5">
-            <div class="row">
-                <div class="col-12">
-                    <div class="seccs">
-                        <h3>IDC001 - Desenvolupament d’Aplicacions Web</h3>
-                        <div class="line2">
-                            <a class="real" href="#" style="width: 50%;">Realitzar</a>
-                            <a class="test" href="compra.html"
-                                style="background-color: #0000FF; width: 50%;">Comprar</a>
-                        </div>
+            </div>
+    </nav>
+    <h2 class="title-3">Comprar Cursos</h2>
+    <div class="line2 mt-5">
+        <!-- Desplegable con las secciones de cada curso -->
+        <select name="tema" id="seccion">
+            <option value="0">Selecciona una secció</option>
+            <option value="1">Informàtica</option>
+            <option value="2">Mecànica</option>
+            <option value="3">Cuina</option>
+        </select>
+        <a id="search" onclick="showCont();" href="#">Buscar</a>
+    </div>
+
+    <div class="container bg-light mt-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="seccs">
+                    <h3>IDC001 - Desenvolupament d’Aplicacions Web</h3>
+                    <div class="line2">
+                        <a class="real" href="#" style="width: 50%;">Realitzar</a>
+                        <a class="test" href="compra.html"
+                            style="background-color: #0000FF; width: 50%;">Comprar</a>
                     </div>
-                    <div class="seccs">
-                        <h3>IDC002 - Desenvolupament d’Aplicacions Web II</h3>
-                        <div class="line2">
-                            <a class="real" href="#" style="width: 50%;">Realitzar</a>
-                            <a class="test" href="compra.html"
-                                style="background-color: #0000FF; width: 50%;">Comprar</a>
-                        </div>
+                </div>
+                <div class="seccs">
+                    <h3>IDC002 - Desenvolupament d’Aplicacions Web II</h3>
+                    <div class="line2">
+                        <a class="real" href="#" style="width: 50%;">Realitzar</a>
+                        <a class="test" href="compra.html"
+                            style="background-color: #0000FF; width: 50%;">Comprar</a>
                     </div>
-                    <div class="seccs">
-                        <h3>IDC003 - Desenvolupament d’Aplicacions Web III</h3>
-                        <div class="line2">
-                            <a class="real" href="#" style="width: 50%;">Realitzar</a>
-                            <a class="test" href="compra.html"
-                                style="background-color: #0000FF; width: 50%;">Comprar</a>
-                        </div>
+                </div>
+                <div class="seccs">
+                    <h3>IDC003 - Desenvolupament d’Aplicacions Web III</h3>
+                    <div class="line2">
+                        <a class="real" href="#" style="width: 50%;">Realitzar</a>
+                        <a class="test" href="compra.html"
+                            style="background-color: #0000FF; width: 50%;">Comprar</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="line3">
-            <a class="real" href="cursosStudent.html">Tornar</a>
-        </div>
-        <script>
-            function showCont() {
-                var x = document.getElementById("seccion").value;
-                if (x == 1) {
-                    document.getElementById("secc1").style.display = "block";
-                    document.getElementById("secc2").style.display = "none";
-                    document.getElementById("secc3").style.display = "none";
-                } else if (x == 2) {
-                    document.getElementById("secc1").style.display = "none";
-                    document.getElementById("secc2").style.display = "block";
-                    document.getElementById("secc3").style.display = "none";
-                } else if (x == 3) {
-                    document.getElementById("secc1").style.display = "none";
-                    document.getElementById("secc2").style.display = "none";
-                    document.getElementById("secc3").style.display = "block";
-                } else {
-                    document.getElementById("secc1").style.display = "none";
-                    document.getElementById("secc2").style.display = "none";
-                    document.getElementById("secc3").style.display = "none";
-                }
+
+    </div>
+    <div class="line3">
+        <a class="real" href="cursosStudent.html">Tornar</a>
+    </div>
+
+    <script>
+        function showCont() {
+            var x = document.getElementById("seccion").value;
+            if (x == 1) {
+                document.getElementById("secc1").style.display = "block";
+                document.getElementById("secc2").style.display = "none";
+                document.getElementById("secc3").style.display = "none";
+            } else if (x == 2) {
+                document.getElementById("secc1").style.display = "none";
+                document.getElementById("secc2").style.display = "block";
+                document.getElementById("secc3").style.display = "none";
+            } else if (x == 3) {
+                document.getElementById("secc1").style.display = "none";
+                document.getElementById("secc2").style.display = "none";
+                document.getElementById("secc3").style.display = "block";
+            } else {
+                document.getElementById("secc1").style.display = "none";
+                document.getElementById("secc2").style.display = "none";
+                document.getElementById("secc3").style.display = "none";
             }
-        </script>
-        <script src="../js/bootstrap.min.js"></script>
-    </body>
+        }
+    </script>
+
+</body>
+
 </html>
