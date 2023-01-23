@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        html,
+        body,
+        main {
+            margin: 0px;
+        }
+        main{
+            background: linear-gradient(45deg, #F145CB 0%, #51E6EF 100%);
+            height: 100%;
+
+        }
+        
+        h1{
+            margin: 0px;
+        }
+        #login{
+            border-radius: 10px;
+        }
+        #login img{
+            width: 200px;
+        }
+        #user_pass{
+            margin: auto;
+            text-align: right;
+        }
+        #user_pass label{
+            display: block;
+            text-align: left;
+            font-weight: bold;
+        }
+        #user_pass input{
+            width: 100%;
+            margin: 10px 0px;
+            border: none;
+            border-bottom: 1px solid lightgrey;
+        }
+        #user_pass div{
+            margin: 1em 0px;
+        }
+        #user_pass a{
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        i{
+            color: lightgray;
+            text-align: left !important;
+        }
+        .center-flex{
+            align-items: center;
+        }
+        #button_login{
+            background: linear-gradient(45deg, #F145CB 0%, #51E6EF 100%);
+            border-radius: 9999px;
+        }
+        #button_login a{
+            text-decoration: none;
+            color: white;
+        }
+        #button_login:hover{
+            background: grey;
+        }
+        #alternative_login{
+            margin: 2em 0px;
+        }
+        #icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #icons div i{
+            width: 1em;
+            font-size: 2.5em;
+            
+        }
+        #facebook i{
+            color: blue;
+        }
+        #twitter img{
+            width: 2.5em;
+            margin: 0px 0px;
+            padding: 0px;           
+        }
+        #google img{
+            width: 2em;
+            margin: 0px 0.5em;
+            padding: 0px;
+        }
+        #sign_up{
+            margin-top: 4em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row text-center justify-content-center pt-5">
+                <div id="login" class="col-12 col-md-4 col-sm-12 bg-white p-5 m-5">
+                    <h1>Registrarse</h1>
+                    <img src="img/image2.png" class="img-fluid" alt="">
+                    <div id="user_pass" style="max-width:400px;margin:auto" class="form-group has-feedback has-feedback-left">
+                        <label for="" class="">Username</label>
+                        <div class="d-flex center-flex">
+                            <i class='form-control-feedback bx bx-user'></i>
+                            <input type="text" name="user" id="user" class="col-6" placeholder="Username">
+                        </div>
+                        <label for="">Password</label>
+                        <div class="d-flex center-flex">
+                            <i class='bx bx-lock'></i>
+                            <input type="password" name="pass" id="pass" class="col-6" placeholder="Password">
+                        </div>
+                        <label for="">Repeat Password</label>
+                        <div class="d-flex center-flex">
+                            <i class='bx bx-lock'></i>
+                            <input type="password" name="pass" id="pass" class="col-6" placeholder="Password">
+                        </div>
+                        <a href="">Forget password?</a>                        
+                    </div>
+                    <!-- Boton de login -->
+                    <div id="button_login" class="p-2">
+                        <a href="../html/indexTeacher.html">Login</a>
+                    </div>
+                    <!-- Or sign up... -->
+                    <div id="alternative_login">
+                        <div class="container">
+                            <div class="row" id="icons">
+                                <p>Or Login</p>
+                                <div class="col-sm-2">
+                                    <a href=""><i class='bx bxl-facebook-circle' style='color:#0a3aff'  ></i></a>
+                                </div>
+                                <div class="col-sm-2" id="twitter"><a href=""><img src="img/twitter.png" alt=""></a></div>
+                                <div class="col-sm-2" id="google"><a href=""><img src="img/google.png" alt=""></a></div>
+                            </div>
+                        </div>
+                    </div>
+                        <div id="sign_up">
+                        <p>Or Login Using</p>
+                        <p style="font-weight: bold;">Login</p>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
